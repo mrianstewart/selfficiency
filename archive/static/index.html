@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Selfficiency</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__inner">
+        <span class="brand">Selfficiency</span>
+      </div>
+    </header>
+
+    <main class="snap" aria-label="Homepage sections">
+      <section class="hero snap__section">
+        <div class="hero__content">
+          <p class="eyebrow">Reduction, not optimisation</p>
+          <h1>Less to manage. More space to live.</h1>
+          <p class="lede">
+            Selfficiency helps you reduce mental load by removing unnecessary
+            decisions, systems, and expectations.
+          </p>
+          <button class="cta" type="button">Reduce the load</button>
+        </div>
+
+        <aside class="hero__card" aria-label="Decision card preview">
+          <div class="card">
+            <p class="card__label">Decision Card</p>
+            <div class="card__carousel" aria-live="polite">
+              <div class="card__slide">
+                <div class="card__item">
+                  <p class="card__title">Let go</p>
+                  <p class="card__text">
+                    Cancel the optional weekly status update.
+                  </p>
+                </div>
+                <div class="card__item">
+                  <p class="card__title">Simplify</p>
+                  <p class="card__text">Keep meetings to two days per week.</p>
+                </div>
+                <div class="card__item">
+                  <p class="card__title">Rule</p>
+                  <p class="card__text">No new requests after 3pm.</p>
+                </div>
+              </div>
+              <div class="card__slide">
+                <div class="card__item">
+                  <p class="card__title">Let go</p>
+                  <p class="card__text">Drop the unused budgeting app.</p>
+                </div>
+                <div class="card__item">
+                  <p class="card__title">Simplify</p>
+                  <p class="card__text">Batch errands into one weekly block.</p>
+                </div>
+                <div class="card__item">
+                  <p class="card__title">Rule</p>
+                  <p class="card__text">No screens in the bedroom.</p>
+                </div>
+              </div>
+              <div class="card__slide">
+                <div class="card__item">
+                  <p class="card__title">Let go</p>
+                  <p class="card__text">Pause the extra weekly classes.</p>
+                </div>
+                <div class="card__item">
+                  <p class="card__title">Simplify</p>
+                  <p class="card__text">Use the same meal plan on weekdays.</p>
+                </div>
+                <div class="card__item">
+                  <p class="card__title">Rule</p>
+                  <p class="card__text">One open project per weekend.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="problem snap__section">
+        <div class="panel">
+          <h2>Problem</h2>
+          <p>Too many decisions.</p>
+          <p>Too many systems.</p>
+          <p>Too much to hold in your head.</p>
+        </div>
+      </section>
+
+      <section class="how snap__section">
+        <div class="panel">
+          <h2>How it works</h2>
+          <ol>
+            <li>Reduce the load</li>
+            <li>Set boundaries</li>
+            <li>Simplify what's causing it</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="feels snap__section">
+        <div class="panel">
+          <h2>What it feels like</h2>
+          <p>Clear. Quiet. Stable.</p>
+          <p>Fewer open loops. A slower heartbeat. Space to live again.</p>
+        </div>
+      </section>
+
+      <section class="repeat-cta snap__section">
+        <button class="cta" type="button">Reduce the load</button>
+      </section>
+    </main>
+    <script>
+      const scroller = document.querySelector(".snap");
+      const sections = Array.from(document.querySelectorAll(".snap__section"));
+      const hero = document.querySelector(".hero");
+
+      if (scroller && sections.length) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+              }
+            });
+          },
+          { root: scroller, threshold: 0.35 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+      }
+
+      if (hero && scroller) {
+        hero.classList.add("is-visible");
+      }
+    </script>
+  </body>
+</html>
