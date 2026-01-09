@@ -5,3 +5,7 @@ out/
 .env*
 *.log
 .DS_Store
+.turbo/
+.eslintcache
+.vscode/
+*.tsbuildinfo
