@@ -4,6 +4,13 @@ SELFFICIENCY
 
 Less to manage. More space to live.
 
+Docs
+- docs/PRD.md
+- docs/DESIGN.md
+- docs/HOMEPAGE_BLUEPRINT.md
+- docs/DECISION_CARD_RULES.md
+- docs/CODING_CHECKLIST.md
+
 What this product is
 
 Selfficiency is a calm, AI-assisted product that reduces mental load by helping users remove unnecessary decisions, systems, and expectations.
