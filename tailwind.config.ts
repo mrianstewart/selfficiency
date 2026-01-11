@@ -5,14 +5,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        canvas: "#f5f6f3",
-        surface: "#fbfbf9",
-        line: "#d9ded7",
-        ink: "#1f2a24",
-        muted: "#5e6b63"
+        canvas: "#f7f5f2",
+        surface: "#ffffff",
+        line: "#e7e2db",
+        ink: "#0d0d0b",
+        muted: "#7a756e",
+        accent: "#0f5e5c"
       },
       boxShadow: {
-        soft: "0 24px 60px rgba(31, 42, 36, 0.12)"
+        soft: "0 12px 30px rgba(17, 17, 15, 0.08)"
       }
     }
   },
